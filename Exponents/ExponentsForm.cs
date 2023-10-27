@@ -12,7 +12,7 @@ using System.Windows.Forms;
  * Date: October 26, 2023
  * Description: A program using user-created method
  *              for the math function Square and Cube
- * Assistance:
+ * Assistance:YouTube
  *************************************/
 
 namespace Exponents
@@ -42,9 +42,10 @@ namespace Exponents
 
             /* calculate the cube of the number and add it to the output - 
              * do this by creating a methd as in the squaring example above */
-
+            UxOutputLabel.Text += "\nCube is: " + Cube(num).ToString();
             // OUTPUT
             // set the output to visible
+            UxGoButton.Enabled = false;
 
             // turn the Go button off
         }
@@ -58,7 +59,7 @@ namespace Exponents
         public int Cube(int num)
         {
             // we will create this code in class
-            return 0;
+            return num * num * num;
 
         }
 
@@ -67,6 +68,7 @@ namespace Exponents
             // the input and output text should be emptied
             // turn the output to invisible
             // turn the Go button back on
+            UxGoButton.Enabled = true;
         }
 
     }
